@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Rust WASM Demo</title>
+</head>
+<body>
+<script type="module">
+    import init, {add, greet} from "./pkg/wasm_math.js";
+
+    async function main() {
+        await init();
+
+        console.log("5 + 3 =", add(5, 3));
+        console.log(greet("Dev Piov"));
+    }
+
+    main();
+</script>
+</body>
+</html>
